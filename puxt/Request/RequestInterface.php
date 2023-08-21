@@ -6,12 +6,11 @@ namespace Puxt\Request;
 
 interface RequestInterface
 {
-    /**
-     * Get the request method used to access the endpoint
-     *
-     * @return string
-     */
     public function getMethod(): string;
+
+    public function getQueryParam(string $key): ?string;
+
+    public function getQueryParams(): array;
 
     public function getQueryString(): ?string;
 }
