@@ -15,4 +15,11 @@ class Request implements RequestInterface
     {
         return $_SERVER['REQUEST_METHOD'];
     }
+
+    public function getQueryString(): ?string
+    {
+        $queryString = $_SERVER['QUERY_STRING'];
+
+        return $queryString === '' ? null : $queryString;
+    }
 }

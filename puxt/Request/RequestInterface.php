@@ -12,4 +12,6 @@ interface RequestInterface
      * @return string
      */
     public function getMethod(): string;
+
+    public function getQueryString(): ?string;
 }
