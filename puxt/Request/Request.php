@@ -6,6 +6,11 @@ namespace Puxt\Request;
 
 class Request implements RequestInterface
 {
+    /**
+     * Get the request method used to access the endpoint
+     *
+     * @return string
+     */
     public function getMethod(): string
     {
         return $_SERVER['REQUEST_METHOD'];
